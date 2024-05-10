@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfume store(kevin)</title>
+
+    <link rel="stylesheet" href="final project.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+
+    <style>
+        h1{
+            margin-left: 100px;
+            margin-top: 100px;
+            font-size: 40px; 
+            letter-spacing: 1.5px; 
+            line-height: 1;
+        }
+     h2{
+        text-align: center;
+     }
+     .ab{
+        position:absolute;
+            top: 235px; 
+            right: 200px;    
+            color: black;
+            font-size: 20px;
+         }
+         .ab:hover {
+            text-decoration: white;}
+           .bc {
+                color: black;
+                 width: 200px;
+                 margin-left: 750px;
+                 bottom: 50px;
+                 position: fixed;
+            }
+    </style>
+</head>
+<script src="finalproject.js"></script>
+<body>
+
+    <header>
+        <nav>
+            <div class="navbar">
+                    <img src="ScentLogo.jpeg" class="logo" alt="Logo of Perfume Store">
+                </a>
+                <ul>
+                    <li><a href="final project.html">Home</a></li>
+                    <li><a href="finalproject2.html">Perfumes</a></li>
+                    <li><a href="finalproject4.html">Sets and Coffrets</a></li>
+                    <li><a href="finalproject5.html">Contact us</a></li>
+                </ul>
+                <div class="search-container">
+                    <input type="text" id="search-input" class="search-input" placeholder="Search...">
+                    <div class="search-icon" onclick="toggleSearch()">
+                        <i class="fas fa-search" style="font-size: 25px;"></i>
+                    </div>
+                </div>
+                <button class="cart-button" onclick="addToCart()" aria-label="Shopping Cart">
+                    <i class="fas fa-cart-shopping"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <div>
+        <h1>Your cart</h1>
+        <a href="finalproject2.html" class="ab">Continue shopping</a>
+    </div>
+   
+    <p id="cart-items"></p>
+     
+
+
+    <button type="button" class="bc" onclick="Checkout()">Checkout</button>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+    var productHTML = localStorage.getItem("product");
+    if (productHTML) {
+        var cartItems = document.getElementById("cart-items");
+        cartItems.innerHTML = productHTML;
+
+        var removeButtons = document.querySelectorAll("#cart-items .product");
+        removeButtons.forEach(function(button) {
+            var removeButton = document.createElement("button");
+            removeButton.textContent = "Remove from Cart";
+            removeButton.classList.add("remove-button");
+            removeButton.style.color = "black";
+            removeButton.onclick = function() {
+                button.remove();
+                localStorage.removeItem("product");
+            };
+            button.appendChild(removeButton);
+        });
+    }
+});
+
+        function Checkout() {
+            alert("Thank you for your order. We will get back to you soon!");
+            document.querySelector(".label5").reset();
+        }
+        </script>
+</body>
+</html>

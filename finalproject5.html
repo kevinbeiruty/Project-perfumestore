@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfume Store(kevin)</title>
+    <link rel="stylesheet" href="final project.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+    <style>
+    .input-group textarea {
+        width: 100%;
+        min-height: 100px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        
+        box-sizing: border-box;
+        }
+        
+     body{
+     background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(perfumeBackground.jpeg);
+            }
+            .label5 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-group {
+    display: flex;
+    margin-bottom: 15px; 
+}
+
+.input {
+    padding: 5px;
+    margin-right: 10px;
+    width: 250px;
+}
+
+.input.comment {
+    padding: 30px; 
+}
+h1{
+    color: white;
+    text-align: center;
+    font-size: 50px;
+}
+        </style>
+</head>
+<body>
+    <script src="finalproject.js"></script>
+
+
+    <header>
+        <nav>
+            <div class="navbar">
+                <img src="ScentLogo.jpeg" class="logo" alt="Logo of Perfume Store">
+                <ul>
+                    <li><a href="final project.html">Home</a></li>
+                    <li><a href="finalproject2.html">Perfumes</a></li>
+                    <li><a href="finalproject4.html">Sets and Coffrets</a></li>
+                    <li><a href="finalproject5.html">Contact us</a></li>
+                </ul>
+                <div class="search-container">
+                    <input type="text" id="search-input" class="search-input" placeholder="Search...">
+                    <div class="search-icon" onclick="toggleSearch()">
+                        <i class="fas fa-search" style="font-size: 25px;"></i>
+                    </div>
+                </div>
+                <button class="cart-button" onclick="addToCart()" aria-label="Shopping Cart">
+                    <i class="fas fa-cart-shopping"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+    
+    <div>
+        <h1>Contact</h1><br><br>
+        <section class="label5">
+            <div class="input-group">
+                <input type="text" placeholder="Name" class="input">
+                <input type="email" placeholder="Email" class="input"><br>
+            </div>
+            <br><br>
+            <div class="input-group">
+                <input type="text" placeholder="Phone number" class="input"><br>
+            </div><br><br>
+            <div class="input-group">
+                <textarea placeholder="Comment" class="input"></textarea>
+            </div><br><br>
+            <button type="button" onclick="submitForm()" class="submit-button">Submit</button>
+        </section>   
+    </div>
+
+    <footer class="small bg-light" style="background-color:rgb(32, 32, 33);">
+        <div class="container py-3 py-sm-5" style="background-color:rgb(149, 149, 151);">
+          <div class="row">
+            <div class="col-12 col-sm-6 col-md-3">
+              <h5>Quick links</h5>
+              <ul class="list-unstyled">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">What's new</a></li>
+                <li><a href="#">Featured Product</a></li>
+                <li><a href="#">My account</a></li>
+              </ul>
+            </div>
+            <div class="col-12 col-sm-6 col-md-3">
+              <h5>Information</h5>
+              <ul class="list-unstyled">
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Shipping &amp; returns</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+            </div>
+            <div class="col-12 col-sm-6 col-md-3">
+              <h5>Follow us</h5>
+              <ul class="list-unstyled">
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">LinkedIn</a></li>
+                <li><a href="#">YouTube</a></li>
+              </ul>
+            </div>
+            <div class="col-12 col-sm-6 col-md-3">
+              <address>
+                <strong>Lebanon</strong><br />
+                Beirut<br />
+                <abbr title="Telephone">T:</abbr
+                ><a href="tel:+919876543210">(987) 654-3210</a><br />
+                <li class="list-inline-item">&copy;2024 Perfume Store.</li>
+                <li class="list-inline-item">All rights reserved.</li>
+                <li class="list-inline-item">
+                  <a href="#">Terms of use and privacy policy</a>
+                </li>
+              </address>
+            </div>
+          </div>
+            </div>
+          </div>
+        </div>
+      </footer>    
+
+    <script>
+        function submitForm() {
+            alert("Thank you for your message. We will get back to you soon!");
+            document.querySelector(".label5").reset();
+        }
+    </script>
+</body>
+</html>

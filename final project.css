@@ -1,0 +1,252 @@
+body {
+    font-family:sans-serif;
+    padding: 0;
+    margin:0;
+    background-size:cover;
+}
+
+nav {
+    background-color: rgb(126, 126, 126);
+}
+
+.logo{
+    width: 150px;
+    cursor: pointer;
+    border-radius: 100%;
+    padding-right: 50px;
+    margin-right: 350px;
+}
+
+.navbar{
+    width: 85%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+}
+
+.navbar ul li::after{
+    content:'';
+    height: 3px;
+    width: 0;
+    background: black;
+    position: absolute;
+    left:0;
+    bottom: -10px;;
+    transition: 0.5s;
+}
+.navbar ul li:hover::after{
+    width: 100%;
+}
+.banner {
+    width: 100%;
+    height: 70vh;
+    background-size: cover;
+    background-position: center;
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(perfumeBackground.jpeg);
+    border-image: fill;
+}
+.content{
+    width: 50%;
+    left: 25%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: left;
+    color: #fff;
+    margin-top: 0%;
+
+}
+.content h2{
+    font-size: 60px;
+    margin-top: 80px;
+}
+.content p{
+    margin: 20px auto;
+    font-size: 20px;
+    font-weight: 100;
+    line-height: 25px;
+}
+
+button {
+    width: 60px;
+    padding: 15px 0;
+    margin: 20px 10px;
+    text-align: center;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #161c1c;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: border 0.5s; 
+}
+.b2{
+    width: auto;
+    padding: 18px 40px;
+    font-size: 15px;
+}
+span {
+    background: #161c1c;
+    height: 100%;
+    width: 0; 
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: width 0.5s; 
+}
+
+button:hover span {
+    width: 100%; 
+}
+
+button:hover {
+    border: none; 
+}
+
+.navbar ul li form button {
+    border: none; 
+}
+
+
+
+.search-container {
+    position: relative;
+    display: inline-block;
+    margin-right: 20px;
+  }
+  
+  .search-input {
+    position: absolute;
+    top: 150%;
+    width: 200px; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none; 
+    transition: top 0.3s ease;
+
+  }
+  
+  .search-icon {
+    cursor: pointer;
+  }
+  
+  .show-search .search-input {
+    display: block; 
+    top: calc(120% + 10px); 
+  }
+  
+
+  .cart-button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+  }
+  
+  .cart-button i {
+    color: #000; 
+    font-size: 23px; 
+  }
+  section {
+    background-image: none; 
+}
+
+
+  .product-card {
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    display: inline-block;
+}
+
+.container {
+    display: flex;
+    background-color: rgb(252, 251, 249);
+}
+.product {
+    border: 4px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 40px;
+    width: 200px;
+    text-align: center;
+}
+
+.product-image{
+    width: 65%;
+   background-color: #000;
+   border-radius: 10%;
+   
+}
+
+
+footer.small {
+    padding: 20px;
+    background-color: #f8f9fa; 
+  }
+  
+  footer.small .container {
+    width: 100%;
+    max-width: 1200px; 
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  footer.small .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0; 
+    width: 100%; 
+  }
+  
+  footer.small .col-12 {
+    flex: 0 0 calc(25% - 20px); 
+    max-width: calc(25% - 20px); 
+    padding: 10px; 
+  }
+  
+  
+  footer.small address {
+    font-style: normal;
+  }
+  
+  
+  footer.small a {
+    color: darkblue; 
+    text-decoration: none;
+  }
+  
+
+
+  
+  
+
+
+
+
+
+
+
